@@ -1,0 +1,16 @@
+Name,Surname,Street,City,Province,ZIP:
+
+John, , Doe, Riverside, NJ, 120 jefferson st., 08075
+
+
+Jack, , McGinnis, Phila, PA, 220 hobo Av., 09119
+
+
+John Da Man, , Repici, Riverside, NJ, 120 Jefferson St., 08075
+
+
+Stephen, , Tyler, SomeTown, SD, 7452 Terrace "At the Plaza" road, 91234
+
+
+, , Blankman, New York,  NY, ,  100101
+

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,7 +35,7 @@ namespace csharp_lista_indirizzi
                 string province;
                 string zip;
 
-                if (chunks.Length == 6)
+                if (chunks.Length is 6)
                 {
                     name = chunks[0];
                     surname = chunks[1];
@@ -42,24 +43,17 @@ namespace csharp_lista_indirizzi
                     city = chunks[3];
                     province = chunks[4];
                     zip = chunks[5];
-                }
 
+                    var address = new Address(name,surname, city, province,street,zip);
+                    addresses.Add(address);
+                    Console.WriteLine("Object successfully parsed.");
+                }
                 else
                 {
-                    name = chunks[0];
-                    secondName = chunks[1];
-                    surname = chunks[2];
-                    street = chunks[3];
-                    city = chunks[4];
-                    province = chunks[5];
-                    zip = chunks[6];
+                    Console.WriteLine("Invalid format, discarding object");
                 }
-
-
-
-                var address = new Address(name, surname, street, city, province, zip);
-                addresses.Add(address);
             }
+            
         }
         public static void Write(IEnumerable<Address> addresses)
         {
